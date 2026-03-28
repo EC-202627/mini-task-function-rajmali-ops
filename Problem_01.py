@@ -1,4 +1,4 @@
-def calculate_fine(book_title, days_overdue, daily_rates = 5):
+def calculate_fine(book_title, days_overdue, daily_rates = 5.0):
     fine = days_overdue*daily_rates
     return f"Book: {book_title} Days overdue: {days_overdue} Fine: Rs.{fine}"
 
