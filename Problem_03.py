@@ -1,6 +1,9 @@
-def calculate_fine(book_title, days_overdue, daily_rates = 5.0):
+def calculate_fine(book_title, days_overdue, daily_rates = 5.0, max_fine = 150.0):
     fine = days_overdue*daily_rates
-    return fine
+    if fine >= max_fine:
+        return f" {max_fine} You have accumulated the maximum fine of INR: 150.0"
+    else:
+        return fine
 
 book_title = input()
 days_overdue = int(input())
